@@ -1,15 +1,15 @@
 #include <iostream>
-void printCircle(int n_radius)
+void printCircle(double n_radius)
 {
-	n_radius *= n_radius;
+	n_radius *= (n_radius * 3.14);
 	std::cout << n_radius << "\n";
 }
 
-int main(void)
+void main(void)
 {
-	int r = 5;
+	double r;
 
-	printCircle(5);
+	std::cin >> r;
 
-	return 0;
+	printCircle(r);
 }
