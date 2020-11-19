@@ -15,7 +15,7 @@ int main()
         {
             m_wordCounter++;
         }
-    };
+    }
 
     std::cout << m_wordCounter;
     return 0;
