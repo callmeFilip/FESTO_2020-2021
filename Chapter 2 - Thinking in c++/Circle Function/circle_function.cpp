@@ -5,11 +5,13 @@ void printCircle(double n_radius)
 	std::cout << n_radius << "\n";
 }
 
-void main(void)
+int main(void)
 {
 	double r;
 
 	std::cin >> r;
 
 	printCircle(r);
+
+	return 0;
 }
