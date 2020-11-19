@@ -8,9 +8,7 @@ void vectorPrint(vector<float> n_vector)
         cout << n_vector[i] << "\n";
     }
 
-    cout << "\n"
-            "\n"
-            "\n";
+    cout << "\n\n\n";
 }
 int main()
 {
