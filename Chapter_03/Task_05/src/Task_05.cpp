@@ -15,5 +15,7 @@ int main()
     A = X + (Y - 2) / (2 + Z);
 
     std::cout << A << "\n";
+    
+    return 0;
 
 }
