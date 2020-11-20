@@ -23,6 +23,7 @@ int main()
 			flag = true;
 		}
 
-		return 0;
 	}
+
+	return 0;
 }
