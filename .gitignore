@@ -1,2 +1,9 @@
 *.json
 *.exe
+*.vscode
+Debug/
+*.sln
+*.vcxproj
+*.filters
+*.user
+.vs/
