@@ -18,4 +18,6 @@ int main() {
 
     fs = 1;
 
+    return 0;
+    
 } ///:~ 
