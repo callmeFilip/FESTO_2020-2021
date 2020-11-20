@@ -1,5 +1,5 @@
 #include <iostream>
-void ptrPassString(std::string* n_string) 
+void ptrPassString(std::string* n_string)
 {
 	*n_string = "Modification 1";
 }
