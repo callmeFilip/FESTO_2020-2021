@@ -3,9 +3,9 @@
 #include <iostream>
 using namespace std;
 
-int main() {
+int main()
+{
 
-    
     double i, j;
     cout << "Enter an double: ";
     cin >> i;
@@ -19,11 +19,10 @@ int main() {
     cout << "i != j is " << (i != j) << endl;
     cout << "i && j is " << (i && j) << endl;
     cout << "i || j is " << (i || j) << endl;
-    
+
     cout << " (i < 10) && (j < 10) is "
-        << ((i < 10) && (j < 10)) << endl;
-    
+         << ((i < 10) && (j < 10)) << endl;
 
     return 0;
 
-} ///:~ 
+} ///:~
