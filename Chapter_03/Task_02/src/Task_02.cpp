@@ -23,6 +23,6 @@ int main()
 			flag = true;
 		}
 
-		
+		return 0;
 	}
 }
