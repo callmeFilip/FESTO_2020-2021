@@ -66,4 +66,5 @@ int main() {
 
     }
     cout << "quitting menu..." << endl;
+    return 0;
 } ///:~ 
