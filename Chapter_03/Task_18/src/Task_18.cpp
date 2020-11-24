@@ -15,7 +15,9 @@ int main()
 {
 	const int firstArr_size = 10;
 	const int secondArr_size = 5;
+
 	int firstArr[firstArr_size];
+	char ch = 'a';
 	int secondArr[secondArr_size];
 
 	for (int i = 0; i < firstArr_size; i++)
@@ -29,7 +31,7 @@ int main()
 
 	}
 
-	std::cout << (long)&firstArr << "\n" << (long)&secondArr << "\n";
+	std::cout <<(long)&ch << "\n" << (long)&firstArr << "\n" << (long)&secondArr << "\n";
 
 	printArr(firstArr, firstArr_size);
 	printArr(secondArr, secondArr_size);
