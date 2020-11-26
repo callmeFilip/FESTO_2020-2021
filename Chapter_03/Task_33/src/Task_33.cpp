@@ -1,13 +1,15 @@
 #include <iostream>
 
+typedef float (*ptr_floatFunc) (char);
+
 float floatFunction(char n_symbol) 
 {
-	std::cout << 1.0f;
+	std::cout << 1.0f << std::endl;
 
 	return 1.0f;
 }
 
-float (*ptr_floatFunc) (char) intFunction(int n_number)
+ptr_floatFunc intFunction(int n_number)
 {
 	float (*ptr_floatFunc) (char);
 
@@ -18,8 +20,13 @@ float (*ptr_floatFunc) (char) intFunction(int n_number)
 
 int main()
 {
-	float* (*funcPtr)(int);
+
+	ptr_floatFunc(*funcPtr) (int);
 
 	funcPtr = intFunction;
+
+	std::cout << (*funcPtr(2)) ('d')<< std::endl;
+
+	return 0;
 
 }
