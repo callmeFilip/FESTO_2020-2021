@@ -1,30 +1,30 @@
 #include <iostream>
+#include <math.h>
 
 int main()
 {
-	bool flag = true;
-	for (int i = 2; i < 200; i++)
-	{
+	bool isPrime;
+	const unsigned int numberRange = 200;
 
-		for (int j = 2; j <= sqrt(i) ; j++) 
+	for (int i = 2; i < numberRange; i++)
+	{
+		isPrime = true;
+		unsigned int iterator_end = sqrt(i);
+
+		for (int j = 2; j <= iterator_end; j++)
 		{
-			if (i % j == 0) 
+			if (i % j == 0)
 			{
-				flag = false;
+				isPrime = false;
+				break;
 			}
 		}
 
-		if (flag) 
+		if (isPrime)
 		{
-			std::cout << i << "\n";
+			std::cout << i << std::endl;
 		}
-		else
-		{
-			flag = true;
-		}
-
 	}
 
 	return 0;
-	
 }
