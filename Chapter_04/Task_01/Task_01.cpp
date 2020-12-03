@@ -1,8 +1,4 @@
-#include <iostream>
-void puts(char *n_text)
-{
-    std::cout << "function call" << std::endl;
-}
+void puts(char *n_text);
 
 int main()
 {
