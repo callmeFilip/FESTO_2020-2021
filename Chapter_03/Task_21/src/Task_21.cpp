@@ -5,14 +5,14 @@
 
 int main()
 {
-	std::string strArr[ARRAYSIZE];
+    std::string strArr[ARRAYSIZE];
 
-	for (int i = 0; i < ARRAYSIZE; i++)
-	{
-		strArr[i] = "number";
-		strArr[i] += i + 1;
-		std::cout << strArr[i] << std::endl;
-	}
+    for (int i = 0; i < ARRAYSIZE; i++)
+    {
+        strArr[i] = "number";
+        strArr[i] += i + 1;
+        std::cout << strArr[i] << std::endl;
+    }
 
-	return 0;
+    return 0;
 }
