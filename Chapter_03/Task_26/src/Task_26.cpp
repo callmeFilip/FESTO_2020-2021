@@ -5,32 +5,32 @@
 
 void setArr(void* n_voidPtr, int n_NumberOfBytes, int n_Value) 
 {
-	int* ptr_intArr;
+    int* ptr_intArr;
 
-	ptr_intArr = static_cast<int*> (n_voidPtr);
+    ptr_intArr = static_cast<int*> (n_voidPtr);
 
-	for (int i = 0 ; i < n_NumberOfBytes ; i++) 
-	{
-		ptr_intArr[i] = n_Value;
-	}
+    for (int i = 0 ; i < n_NumberOfBytes ; i++) 
+    {
+        ptr_intArr[i] = n_Value;
+    }
 }
 
 int main()
 {
 
-	int intArr[5];
+    int intArr[5];
 
-	void* voidPtr;
+    void* voidPtr;
 
-	voidPtr = static_cast<void*> (intArr);
+    voidPtr = static_cast<void*> (intArr);
 
-	setArr(voidPtr, SIZE, VALUE);
+    setArr(voidPtr, SIZE, VALUE);
 
-	for (int i : intArr) 
-	{
-		std::cout << i << std::endl;
-	}
+    for (int i : intArr) 
+    {
+        std::cout << i << std::endl;
+    }
 
-	return 0;
-	
+    return 0;
+    
 }
