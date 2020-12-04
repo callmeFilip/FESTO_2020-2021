@@ -6,12 +6,12 @@ int main()
     bool isPrime;
     const unsigned int numberRange = 200;
 
-    for (int i = 2; i < numberRange; i++)
+    for (unsigned int i = 2; i < numberRange; i++)
     {
         isPrime = true;
         unsigned int iterator_end = sqrt(i);
 
-        for (int j = 2; j <= iterator_end; j++)
+        for (unsigned int j = 2; j <= iterator_end; j++)
         {
             if (i % j == 0)
             {
