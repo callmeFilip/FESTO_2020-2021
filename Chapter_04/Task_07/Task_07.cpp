@@ -10,7 +10,9 @@ int main()
         doubleStash.add(&i);
     }
 
-    for (size_t i = 0; i < doubleStash.length(); i++)
+    double doubleStashLen = doubleStash.length();
+
+    for (int i = 0; i < doubleStashLen; i++)
     {
         std::cout << "index: " << i << "\t=\t"
                   << *(double *)doubleStash.at(i) << std::endl;

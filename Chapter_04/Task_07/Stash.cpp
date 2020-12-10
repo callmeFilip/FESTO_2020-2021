@@ -44,7 +44,7 @@ bool Stash::add(const void *element)
     int temp_startBytes = m_next * m_size;
     unsigned char *temp_element = (unsigned char *)element;
 
-    for (size_t i = 0; i < m_size; i++)
+    for (int i = 0; i < m_size; i++)
     {
         m_storage[temp_startBytes + i] = temp_element[i];
     }
@@ -81,7 +81,7 @@ bool Stash::inflate(int increase)
     unsigned char *buffStorage = new unsigned char[temp_newBytes];
 
     //copying from old storage to the new one
-    for (size_t i = 0; i < temp_oldBytes; i++)
+    for (int i = 0; i < temp_oldBytes; i++)
     {
         buffStorage[i] = m_storage[i];
     }
