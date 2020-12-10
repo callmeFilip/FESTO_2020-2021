@@ -1,8 +1,13 @@
 #include <iostream>
 
-enum Colors 
+enum Colors
 {
-    red, blue, green, yellow
+    red,
+    blue,
+    green,
+    yellow,
+    purple,
+    magenta
 };
 
 int main()
@@ -10,11 +15,10 @@ int main()
 
     Colors colorPallet;
 
-    for (int i = 0; i < sizeof(colorPallet);i++) 
+    for (int i = red; i <= magenta; i++)
     {
         std::cout << i << std::endl;
     }
 
     return 0;
-
 }
