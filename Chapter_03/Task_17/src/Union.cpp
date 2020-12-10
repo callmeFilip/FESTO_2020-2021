@@ -2,7 +2,8 @@
 // The size and simple use of a union
 #include <iostream>
 using namespace std;
-union Packed { // Declaration similar to a class
+union Packed
+{ // Declaration similar to a class
     char i;
     short j;
     int k;
@@ -12,18 +13,24 @@ union Packed { // Declaration similar to a class
     // The union will be the size of a
     // double, since that's the largest element
 }; // Semicolon ends a union, like a struct
-int main() {
-    
+
+int main()
+{
+
     cout << "sizeof(Packed) = "
-        << sizeof(Packed) << endl;
+         << sizeof(Packed) << endl;
+
     Packed x;
+
     x.i = 'c';
     cout << x.i << endl;
+
     x.d = 3.14159;
     cout << x.d << endl;
+
     x.d = 23;
     cout << x.d << endl;
 
     return 0;
 
-} ///:~ 
+} ///:~
