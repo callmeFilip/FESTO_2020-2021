@@ -41,6 +41,7 @@ public:
     };
 
     Nest nest;
+
     //methods
     void display();
 };

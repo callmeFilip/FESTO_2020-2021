@@ -29,7 +29,6 @@ Hen::Nest::Egg::Egg()
 
 int main()
 {
-
     Hen hen;
     Hen::Nest nest;
     Hen::Nest::Egg egg;
