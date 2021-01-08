@@ -2,7 +2,7 @@
 
 #include "Header.h"
 
-Message::Message(std::string message = "default value")
+Message::Message(std::string message)
 {
     m_message = message;
 }

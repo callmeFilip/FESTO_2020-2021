@@ -6,7 +6,7 @@ class Message
     std::string m_message;
 
 public:
-    Message(std::string);
+    Message(std::string = "default value");
 
     void print();
     void print(std::string);
