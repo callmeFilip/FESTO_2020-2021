@@ -21,7 +21,7 @@ int Combinator::add(int first_number, int second_number, int third_number)
 
 #else
 
-int Combinator::add(int first_number = 0, int second_number = 0, int third_number = 0)
+int Combinator::add(int first_number, int second_number, int third_number)
 {
     return first_number + second_number + third_number;
 }

@@ -4,11 +4,13 @@
 class Combinator
 {
 public:
-    int add(int, int, int);
-#ifndef DEFAULT_VALUE
+#ifdef DEFAULT_VALUE
+    int add(int = 0, int = 0, int = 0);
+#else
     int add();
     int add(int);
     int add(int, int);
+    int add(int, int, int);
 #endif
 };
 
