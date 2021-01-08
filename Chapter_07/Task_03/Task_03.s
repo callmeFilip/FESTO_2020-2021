@@ -73,11 +73,27 @@ LFB3:
 	ret
 	.cfi_endproc
 LFE3:
+	.def	__ZL14functionStaticif;	.scl	3;	.type	32;	.endef
+__ZL14functionStaticif:
+LFB4:
+	.cfi_startproc
+	pushl	%ebp
+	.cfi_def_cfa_offset 8
+	.cfi_offset 5, -8
+	movl	%esp, %ebp
+	.cfi_def_cfa_register 5
+	movl	$1, %eax
+	popl	%ebp
+	.cfi_restore 5
+	.cfi_def_cfa 4, 4
+	ret
+	.cfi_endproc
+LFE4:
 	.align 2
 	.globl	__ZN7Task_038functionEidf
 	.def	__ZN7Task_038functionEidf;	.scl	2;	.type	32;	.endef
 __ZN7Task_038functionEidf:
-LFB4:
+LFB5:
 	.cfi_startproc
 	pushl	%ebp
 	.cfi_def_cfa_offset 8
@@ -96,12 +112,12 @@ LFB4:
 	.cfi_def_cfa 4, 4
 	ret	$16
 	.cfi_endproc
-LFE4:
+LFE5:
 	.align 2
 	.globl	__ZN7Task_038functionEv
 	.def	__ZN7Task_038functionEv;	.scl	2;	.type	32;	.endef
 __ZN7Task_038functionEv:
-LFB5:
+LFB6:
 	.cfi_startproc
 	pushl	%ebp
 	.cfi_def_cfa_offset 8
@@ -116,12 +132,12 @@ LFB5:
 	.cfi_def_cfa 4, 4
 	ret
 	.cfi_endproc
-LFE5:
+LFE6:
 	.def	___main;	.scl	2;	.type	32;	.endef
 	.globl	_main
 	.def	_main;	.scl	2;	.type	32;	.endef
 _main:
-LFB6:
+LFB7:
 	.cfi_startproc
 	pushl	%ebp
 	.cfi_def_cfa_offset 8
@@ -137,5 +153,5 @@ LFB6:
 	.cfi_def_cfa 4, 4
 	ret
 	.cfi_endproc
-LFE6:
+LFE7:
 	.ident	"GCC: (MinGW.org GCC Build-2) 9.2.0"

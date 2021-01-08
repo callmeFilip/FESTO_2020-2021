@@ -15,9 +15,14 @@ const int functionConst(const int) // __Z13functionConsti
     return 0;
 }
 
-double function(int, int, double) // __Z8functioni
+double function(int, int, double) // __Z8functioniid
 {
     return 0.0;
+}
+
+static bool functionStatic(int, float) //__ZL14functionStaticif
+{
+    return true;
 }
 
 int Task_03::function(int, double, float) // __ZN7Task_038functionEidf
