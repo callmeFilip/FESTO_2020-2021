@@ -22,6 +22,10 @@ Stash::~Stash()
 
 void Stash::add(const void *element)
 {
+    if (m_storage->msize() < m_size * (m_quantity + 1))
+    {
+        m_storage->pointer(m_storage->msize() * 2);
+    }
     memcpy(m_storage->pointer() + (m_quantity * m_size), element, m_size);
     m_quantity++;
 }
