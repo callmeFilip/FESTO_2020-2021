@@ -12,9 +12,6 @@ enum Colors
 
 int main()
 {
-
-    Colors colorPallet;
-
     for (int i = red; i <= magenta; i++)
     {
         std::cout << i << std::endl;
