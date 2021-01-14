@@ -2,9 +2,12 @@
 #include "Functions.h"
 using namespace std;
 
-void main()
+int main()
 {
-    cout << functions::functionChar()  << "\n";
-    cout << functions::functionInt()   << "\n";
-    cout << functions::functionFloat() << "\n";
+    functions::functionVoid();
+    functions::functionChar('a');
+    functions::functionInt(12);
+    functions::functionFloat(2.0f);
+
+    return 0;
 }
