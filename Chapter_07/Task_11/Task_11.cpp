@@ -17,6 +17,11 @@ Stash::Stash(int n_size, int initQuantity)
 
 Stash::~Stash()
 {
+    if (m_storage->moved())
+    {
+        std::cout << "Mem has been reallocated to another address!" << std::endl;
+    }
+
     delete m_storage;
 }
 
@@ -66,4 +71,4 @@ int main()
 }
 
 //It does not make sence to keep boolean that tells if the memory has been moved
-//even in ensureMinSize() is better to check available size instead of moved()
+//even in ensureMinSize() is better to check available size instead of moved
