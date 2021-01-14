@@ -5,6 +5,7 @@ Mem::Mem(int minSize)
 {
     mem = 0;
     size = 0;
+
     ensureMinSize(minSize);
 }
 
@@ -27,6 +28,7 @@ void Mem::ensureMinSize(int minSize)
         memcpy(newmem, mem, size);
 
         delete[] mem;
+
         mem = newmem;
         size = minSize;
     }
@@ -35,5 +37,6 @@ void Mem::ensureMinSize(int minSize)
 byte *Mem::pointer(int minSize)
 {
     ensureMinSize(minSize);
+
     return mem;
 }

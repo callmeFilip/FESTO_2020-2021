@@ -16,20 +16,25 @@ public:
     void concat(const char *str);
     void print(std::ostream &os);
 };
+
 MyString::MyString() { buf = 0; }
+
 MyString::MyString(const char *str)
 {
     buf = new Mem(strlen(str) + 1);
     strcpy((char *)buf->pointer(), str);
 }
+
 void MyString::concat(const char *str)
 {
     if (!buf)
+    {
         buf = new Mem;
-    strcat((char *)buf->pointer(
-               buf->msize() + strlen(str) + 1),
-           str);
+    }
+
+    strcat((char *)buf->pointer(buf->msize() + strlen(str) + 1), str);
 }
+
 void MyString::print(std::ostream &os)
 {
 
@@ -39,6 +44,7 @@ void MyString::print(std::ostream &os)
     }
     os << buf->pointer() << std::endl;
 }
+
 MyString::~MyString() { delete buf; }
 
 int main()
@@ -47,6 +53,7 @@ int main()
     s.print(std::cout);
     s.concat(" some additional stuff");
     s.print(std::cout);
+
     MyString s2;
     s2.concat("Using default constructor");
     s2.print(std::cout);
