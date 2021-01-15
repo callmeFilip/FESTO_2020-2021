@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#define ARRAYSIZE 6
+const unsigned int ARRAYSIZE = 6;
 
 int main()
 {
