@@ -38,4 +38,6 @@ int main()
     const int *const ccip = w(); // OK
     const int *cip2 = w();       // OK
     //*w() = 1;                    // error: assignment of read-only location '* w()'
+
+    return 0;
 }
