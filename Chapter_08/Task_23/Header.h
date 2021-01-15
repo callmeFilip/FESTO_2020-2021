@@ -7,4 +7,5 @@ public:
     void makeSound() const;
     void setAge(int = 0);
 };
+
 #endif

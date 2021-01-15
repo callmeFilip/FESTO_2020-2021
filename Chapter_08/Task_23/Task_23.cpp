@@ -18,7 +18,7 @@ int main()
     const Animal snake;
 
     snake.makeSound();
-    //! snake.setAge(5); //passing 'const Animal' as 'this' argument discards qualifiers [-fpermissive]
+    //! snake.setAge(5); //passing 'const Animal' as 'this' argument discards qualifiers
 
     return 0;
 }
