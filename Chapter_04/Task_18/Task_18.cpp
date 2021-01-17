@@ -1,12 +1,12 @@
 #include <iostream>
-#define TEXTSIZE 8    //define text size in int
-#define TEXT "osmina" //define text with ""
+const char *TEXT = "osmina"; //define text with ""
+const int TEXTSIZE = 7;      //define text size in int
 
-char *strCopy(char *charArray, int size)
+char *strCopy(const char *charArray)
 {
-    char *resultCharArray = new char[size];
+    char *resultCharArray = new char[TEXTSIZE];
 
-    for (int i = 0; i < size; i++)
+    for (int i = 0; i < TEXTSIZE - 1; i++)
     {
         resultCharArray[i] = charArray[i];
     }
@@ -16,8 +16,8 @@ char *strCopy(char *charArray, int size)
 
 int main()
 {
-    char *firstIteration = strCopy(TEXT, TEXTSIZE);
-    char *secondIteration = strCopy(firstIteration, TEXTSIZE);
+    char *firstIteration = strCopy(TEXT);
+    char *secondIteration = strCopy(firstIteration);
 
     //printing the result of second iteration
 
@@ -32,7 +32,11 @@ int main()
               << (long)secondIteration
               << std::endl;
 
-    delete firstIteration, secondIteration;
+    for (int i = 0; i < TEXTSIZE - 1; i++)
+    {
+        delete &firstIteration[i];
+        delete &secondIteration[i];
+    }
 
     return 0;
 }
