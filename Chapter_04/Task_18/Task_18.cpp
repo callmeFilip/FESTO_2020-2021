@@ -1,12 +1,27 @@
 #include <iostream>
 const char *TEXT = "osmina"; //define text with ""
-const int TEXTSIZE = 7;      //define text size in int
+
+inline int findLength(const char *charArray)
+{
+    int wordSize = 0;
+
+    while (charArray[wordSize] != '\0')
+    {
+        wordSize++;
+    }
+    wordSize++;
+
+    return wordSize;
+}
 
 char *strCopy(const char *charArray)
 {
-    char *resultCharArray = new char[TEXTSIZE];
 
-    for (int i = 0; i < TEXTSIZE - 1; i++)
+    static const int SIZE = findLength(charArray);
+
+    char *resultCharArray = new char[SIZE];
+
+    for (int i = 0; i < SIZE; i++)
     {
         resultCharArray[i] = charArray[i];
     }
@@ -16,11 +31,11 @@ char *strCopy(const char *charArray)
 
 int main()
 {
+
     char *firstIteration = strCopy(TEXT);
     char *secondIteration = strCopy(firstIteration);
 
     //printing the result of second iteration
-
     std::cout << firstIteration
               << "\n address: "
               << (long)firstIteration
@@ -32,11 +47,8 @@ int main()
               << (long)secondIteration
               << std::endl;
 
-    for (int i = 0; i < TEXTSIZE - 1; i++)
-    {
-        delete &firstIteration[i];
-        delete &secondIteration[i];
-    }
+    delete[] firstIteration;
+    delete[] secondIteration;
 
     return 0;
 }
