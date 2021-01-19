@@ -12,4 +12,4 @@ int main(int argc, char const *argv[])
     return 0;
 }
 
-// Why is the function called with inline modificator?
+// Why is the function with inline modificator still called in main?
