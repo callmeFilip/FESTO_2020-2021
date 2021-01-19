@@ -13,10 +13,10 @@ int findLength(const char *charArray)
     return wordSize;
 }
 
-Contact::Contact()
+Contact::Contact(const char *firstNameInitValue, const char *lastNameInitValue)
     //setting strings
-    : firstName_string("Petar"),
-      lastName_string("Petrov")
+    : firstName_string(firstNameInitValue),
+      lastName_string(lastNameInitValue)
 {
     //setting length
     firstName_size = findLength(firstName_string);
@@ -30,7 +30,7 @@ Contact::Contact()
 
 int main()
 {
-    Contact obj;
+    Contact obj("Petar", "Petrov");
 
     const char *textHolder = 0;
     textHolder = obj.lookup(0); //textHolder = "Petar"

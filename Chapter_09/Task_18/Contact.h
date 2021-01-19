@@ -13,7 +13,7 @@ private:
     FIELD(lastName);
 
 public:
-    Contact();
+    Contact(const char *firstNameInitValue = "First name not set", const char *lastNameInitValue = "Last name not set");
     const char *lookup(const int &index);
 };
 
