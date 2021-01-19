@@ -17,22 +17,4 @@ public:
     const char *lookup(const int &index);
 };
 
-const char *Contact::lookup(const int &index)
-{
-    switch (index)
-    {
-        //firstName
-    case 0:
-        return firstName_string;
-        break;
-
-        //lastName
-    case 1:
-        return lastName_string;
-        break;
-    }
-
-    return 0;
-}
-
 #endif

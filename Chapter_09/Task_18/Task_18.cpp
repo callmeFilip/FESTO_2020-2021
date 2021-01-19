@@ -28,13 +28,33 @@ Contact::Contact(const char *firstNameInitValue, const char *lastNameInitValue)
     lastName_index = initIndex++;
 }
 
+const char *Contact::lookup(const int &index)
+{
+    switch (index)
+    {
+        //firstName
+    case 0:
+        return firstName_string;
+        break;
+
+        //lastName
+    case 1:
+        return lastName_string;
+        break;
+    }
+
+    return 0;
+}
+
 int main()
 {
     Contact obj("Petar", "Petrov");
 
     const char *textHolder = 0;
-    textHolder = obj.lookup(0); //textHolder = "Petar"
-    textHolder = obj.lookup(1); //textHolder = "Petrov"
+    textHolder = obj.lookup(0); // textHolder = "Petar"
+    textHolder = obj.lookup(1); // textHolder = "Petrov"
+
+    delete textHolder;
 
     return 0;
 }
