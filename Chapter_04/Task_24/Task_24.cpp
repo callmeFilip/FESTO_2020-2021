@@ -21,11 +21,12 @@ void printData(LinkedList *ptr_start)
 
     while (current_element->m_next != 0)
     {
-        std::cout << current_element->m_value << std::endl;
+        std::cout << (long)current_element
+                  << " Have m_value = "
+                  << current_element->m_value
+                  << std::endl;
         current_element = current_element->m_next;
     }
-
-    delete current_element;
 }
 
 int main()
@@ -35,7 +36,16 @@ int main()
     createArray(start, 5);
     printData(start);
 
-    delete start;
+    // Cleanup
+    LinkedList *current = start;
+    LinkedList *previous;
+    while (current != 0)
+    {
+        previous = current;
+        current = current->m_next;
+
+        delete previous;
+    }
 
     return 0;
 }
