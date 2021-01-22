@@ -1,19 +1,20 @@
 #include <iostream>
 
-typedef float (*ptr_floatFunc)(char);
+typedef float (*ptr_floatFunc_t)(char);
+typedef ptr_floatFunc_t (*funcPtr_t)(int);
 
 float floatFunction(char n_symbol)
 {
-    std::cout << 1.0f << std::endl;
+    std::cout << n_symbol << std::endl;
 
     return 1.0f;
 }
 
-ptr_floatFunc intFunction(int n_number)
+ptr_floatFunc_t intFunction(int n_number)
 {
-    float (*ptr_floatFunc)(char);
+    ptr_floatFunc_t ptr_floatFunc = floatFunction;
 
-    ptr_floatFunc = floatFunction;
+    std::cout << n_number << std::endl;
 
     return ptr_floatFunc;
 }
@@ -21,11 +22,11 @@ ptr_floatFunc intFunction(int n_number)
 int main()
 {
 
-    ptr_floatFunc (*funcPtr)(int);
+    funcPtr_t funcPtr;
 
     funcPtr = intFunction;
 
-    std::cout << (*funcPtr(2))('d') << std::endl;
+    std::cout << funcPtr(2)('d') << std::endl; //300 iq moves
 
     return 0;
 }
