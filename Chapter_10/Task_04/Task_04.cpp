@@ -1,6 +1,7 @@
 #include "Monitor.h"
 #include <iostream>
 
+// Monitor::
 int Monitor::incidents = 0;
 
 void Monitor::addIncident()
@@ -8,6 +9,12 @@ void Monitor::addIncident()
     incidents++;
 }
 
+void Monitor::printIncidents() const
+{
+    std::cout << incidents << std::endl;
+}
+
+// Global function
 void addAndTrackIncident()
 {
     static Monitor obj;
@@ -15,11 +22,7 @@ void addAndTrackIncident()
     obj.printIncidents();
 }
 
-void Monitor::printIncidents() const
-{
-    std::cout << incidents << std::endl;
-}
-
+//
 int main(int argc, char const *argv[])
 {
     const int incidentCount = 10;
