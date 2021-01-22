@@ -14,7 +14,7 @@ struct StashedStack
 
     //methods
     void push(Stash *element);
-    Stash *pop(void);
+    char *pop(void);
     void fillFromFile(std::string path);
 };
 

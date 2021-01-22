@@ -16,13 +16,13 @@ void StashedStack::push(Stash *element)
     m_stack.push(element);
 }
 
-Stash *StashedStack::pop()
+char *StashedStack::pop()
 {
     Stash *result;
 
     result = (Stash *)m_stack.pop();
 
-    return result;
+    return ((char *)result->at(0));
 }
 
 void StashedStack::fillFromFile(std::string path)

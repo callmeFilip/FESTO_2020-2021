@@ -208,12 +208,12 @@ int main()
     storage.fillFromFile("test.txt");
 
     //gets the element from Stack and saves it in temporary Stash * object
-    Stash *result;
+    char *result;
 
     //while the stack is not empty, pop last element, save it to result and print it
     while ((result = storage.pop()) != 0)
     {
-        std::cout << (char *)result->at(0) << std::endl;
+        std::cout << result << std::endl;
     }
 
     //cleanup
