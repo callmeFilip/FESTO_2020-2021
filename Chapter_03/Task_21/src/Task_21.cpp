@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-const unsigned int ARRAYSIZE = 6;
+const int ARRAYSIZE = 6;
 
 int main()
 {
@@ -10,7 +10,7 @@ int main()
     for (int i = 0; i < ARRAYSIZE; i++)
     {
         strArr[i] = "number";
-        strArr[i] += i + 1;
+        //strArr[i] += i + 1;
         std::cout << strArr[i] << std::endl;
     }
 
