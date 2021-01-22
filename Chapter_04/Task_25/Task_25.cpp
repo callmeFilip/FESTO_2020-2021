@@ -7,7 +7,10 @@ void LinkedList::printData()
 
     while (current_element->m_next != 0)
     {
-        std::cout << current_element->m_value << std::endl;
+        std::cout << (long)current_element
+                  << " Have m_value = "
+                  << current_element->m_value
+                  << std::endl;
         current_element = current_element->m_next;
     }
 
@@ -36,7 +39,16 @@ int main()
     start->createArray(5);
     start->printData();
 
-    delete start;
+    // Cleanup
+    LinkedList *current = start;
+    LinkedList *previous;
+    while (current != 0)
+    {
+        previous = current;
+        current = current->m_next;
+
+        delete previous;
+    }
 
     return 0;
 }
