@@ -12,6 +12,7 @@ int fibbonaciSequence(bool reset = false)
         previousNum = 0;
         nextNum = 1;
         order = true;
+        return 0;
     }
 
     if (order)
@@ -28,20 +29,28 @@ int fibbonaciSequence(bool reset = false)
     }
 }
 
+void printFibbonaci(int count)
+{
+    if (count <= 0)
+    {
+        return;
+    }
+
+    for (int i = 0; i < count; i++)
+    {
+        std::cout << fibbonaciSequence() << std::endl;
+    }
+
+    std::cout << "-------------------------------" << std::endl;
+}
+
 int main(int argc, char const *argv[])
 {
-    for (int i = 0; i < 10; i++)
-    {
-        std::cout << fibbonaciSequence() << std::endl;
-    }
+    printFibbonaci(10);
 
-    std::cout << "reset\n"
-              << fibbonaciSequence(true) << std::endl;
+    fibbonaciSequence(true);
 
-    for (int i = 0; i < 9; i++)
-    {
-        std::cout << fibbonaciSequence() << std::endl;
-    }
+    printFibbonaci(10);
 
     return 0;
 }
