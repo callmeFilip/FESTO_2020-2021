@@ -39,6 +39,8 @@ int main()
     f(); // Calls static constructor for b
 
     out << "leaving main()" << endl;
+
+    return 0;
 } ///:~
 
 /**
