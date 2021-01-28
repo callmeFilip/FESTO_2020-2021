@@ -20,7 +20,7 @@ void function()
 
 #ifdef FIXED
 
-    DoubleStash::Stash objInt(1); // Stash is ambiguous
+    IntStash::Stash objInt(1); // Stash is ambiguous
     DoubleStash::Stash objDouble(1.0);
 
 #else
