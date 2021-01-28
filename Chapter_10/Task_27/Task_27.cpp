@@ -16,8 +16,7 @@ void StaticIntStorage::print()
 
 int main()
 {
-    StaticIntStorage obj;
-    obj.print();
+    StaticIntStorage::print();
 
     return 0;
 }
