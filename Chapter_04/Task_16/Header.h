@@ -21,7 +21,6 @@ struct Stash
     bool add(const void *element);
     void *at(int index);
     int length();
-    bool inflate(int increase);
 };
 
 #endif
