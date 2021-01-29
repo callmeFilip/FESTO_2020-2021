@@ -16,3 +16,5 @@ int main()
 
     return 0;
 }
+
+// The order of compiling doesn't matter, the result is always false

@@ -18,8 +18,6 @@ bool Mirror::test() const
     {
         return m_flag;
     }
-    else
-    {
-        return this->test();
-    }
+
+    return m_ptrMirror->test();
 }
