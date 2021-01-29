@@ -4,8 +4,8 @@ using namespace std;
 
 int main()
 {
-    int *smallFish = new int(0);
-    long *longFish = new long(0);
+    int *smallFish = new int;
+    long *longFish = new long;
     char *name = new char[100];
     float *measurements = new float[100];
 
