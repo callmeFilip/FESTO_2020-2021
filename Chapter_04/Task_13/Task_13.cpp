@@ -8,5 +8,11 @@ int main()
 
     type1.printVideoData();
 
+    type1.returned();
+
+    type1.printVideoData();
+
+    type1.videotypeData();
+
     return 0;
 }
