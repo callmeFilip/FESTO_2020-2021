@@ -18,7 +18,6 @@ void Hen::Nest::Egg::display()
 
 int main()
 {
-
     Hen hen;
     Hen::Nest nest;
     Hen::Nest::Egg egg;
