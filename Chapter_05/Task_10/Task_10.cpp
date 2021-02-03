@@ -25,13 +25,18 @@ void Hen::Nest::Egg::display()
 int main()
 {
     Stash intStash;
+
     intStash.initialize(sizeof(Hen));
+
     for (int i = 0; i < 100; i++)
+    {
         intStash.add(new Hen);
+    }
+
     for (int j = 0; j < intStash.count(); j++)
     {
         cout << "intStash.fetch(" << j << ") = ";
-        (*(Hen *)intStash.fetch(j)).display();
+        ((Hen *)intStash.fetch(j))->display();
     }
 
     // Holds 80-character strings:
