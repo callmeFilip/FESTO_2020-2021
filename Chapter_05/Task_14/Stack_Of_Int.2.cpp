@@ -1,3 +1,7 @@
+//#define STACKOFINT1
+
+#ifdef STACKOFINT1
+
 #include <cstring>
 #include <assert.h>
 #include <vector>
@@ -86,3 +90,4 @@ int *Stack_Of_Int::Stack_Imp::pop()
 
     return result;
 }
+#endif

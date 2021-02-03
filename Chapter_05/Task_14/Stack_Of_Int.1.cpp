@@ -1,3 +1,6 @@
+#define STACKOFINT2
+#ifdef STACKOFINT2
+
 #include <cstring>
 #include <assert.h>
 
@@ -88,3 +91,4 @@ int *Stack_Of_Int::Stack_Imp::pop()
 
     return result;
 }
+#endif

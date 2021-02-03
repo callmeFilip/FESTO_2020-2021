@@ -15,5 +15,7 @@ int main()
 
     std::cout << *intStorage.peek() << std::endl;
 
+    std::cout << *intStorage.pop() << std::endl;
+
     return 0;
 }
