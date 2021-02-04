@@ -107,6 +107,16 @@ int Stash::length()
 }
 
 //stack
+
+Stack::~Stack()
+{
+    Link *previous = startingHead;
+    startingHead = startingHead->next;
+
+    delete (char *)previous->data;
+    delete previous;
+}
+
 void Stack::Link::initialize(void *n_ptrDat, Link *n_ptrNext)
 {
     data = n_ptrDat;
