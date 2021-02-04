@@ -17,8 +17,8 @@ int main()
     Rock *stone;
     void *vPtr = &bird;
 
-    bird = vPtr; // invalid conversion from 'void*' to 'Bird*' in C++
-                 // works fine, when compiled in C
+    //bird = vPtr; // invalid conversion from 'void*' to 'Bird*' in C++
+    // works fine, when compiled in C
 
     printf("End of main..");
 
