@@ -23,7 +23,6 @@ int main()
 {
     Velociraptor dragon2 = getFakeDragon();
     sendFakeDragon(dragon2);
-    Velociraptor dragon1 = getFakeDragon(); // warning can be ignored
 
     return 0;
 }
