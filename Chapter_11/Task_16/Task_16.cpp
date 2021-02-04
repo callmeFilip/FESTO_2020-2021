@@ -12,13 +12,13 @@ Velociraptor getFakeDragon()
     return result;
 }
 
-void sendFakeDragon(Velociraptor obj) {}
+void sendFakeDragon(Velociraptor obj) {} // warning can be ignored
 
 int main()
 {
-    Velociraptor dragon2 = 1;
+    Velociraptor dragon2;
     sendFakeDragon(dragon2);
-    Velociraptor dragon1 = getFakeDragon();
+    Velociraptor dragon1 = getFakeDragon(); // warning can be ignored
 
     //sendFakeDragon(dragon1);
 
