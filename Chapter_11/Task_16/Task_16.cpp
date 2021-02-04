@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Velociraptor.h"
-Velociraptor::Velociraptor(Velociraptor &other) : m_data(other.m_data)
+
+Velociraptor::Velociraptor(const Velociraptor &other) : m_data(other.m_data)
 {
     std::cout << "Copy-Constructor called" << std::endl;
 }
@@ -11,15 +12,15 @@ Velociraptor getFakeDragon()
     return result;
 }
 
-Velociraptor sendFakeDragon(Velociraptor obj)
-{
-    return obj;
-}
+void sendFakeDragon(Velociraptor obj) {}
 
 int main()
 {
-    Velociraptor dragon;
-    getFakeDragon();
-    sendFakeDragon(dragon);
+    Velociraptor dragon2 = 1;
+    sendFakeDragon(dragon2);
+    Velociraptor dragon1 = getFakeDragon();
+
+    //sendFakeDragon(dragon1);
+
     return 0;
 }

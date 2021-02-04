@@ -8,7 +8,7 @@ private:
 
 public:
     Velociraptor(int data = 0) : m_data(data) {}
-    Velociraptor(Velociraptor &other);
+    Velociraptor(const Velociraptor &other);
 };
 
 #endif // VELOCIRAPTOR_H
