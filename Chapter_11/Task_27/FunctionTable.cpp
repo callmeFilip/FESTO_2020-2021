@@ -32,7 +32,7 @@ int main()
 
     funcStorage.run();
 
-    std::cout << "Poppint the last 2 elements.." << std::endl;
+    std::cout << "Popping the last 2 elements.." << std::endl;
     funcStorage.remove();
     funcStorage.remove();
 
