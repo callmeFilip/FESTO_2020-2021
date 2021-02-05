@@ -1,6 +1,7 @@
 #ifndef NINJA_H
 #define NINJA_H
 #include "Turtle.h"
+
 class Ninja
 {
 private:
