@@ -6,8 +6,8 @@ void Increment::print() const
     std::cout << m_number << std::endl;
 }
 
-const Increment &operator++(Increment &obj)
+const Increment &Increment::operator++()
 {
-    obj.m_number++;
-    return obj;
+    m_number++;
+    return *this;
 }

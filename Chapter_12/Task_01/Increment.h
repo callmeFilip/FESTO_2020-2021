@@ -12,7 +12,7 @@ public:
 
     void print() const;
 
-    friend const Increment &operator++(Increment &obj);
+    const Increment &operator++();
 };
 
 #endif // INCREMENT_H
