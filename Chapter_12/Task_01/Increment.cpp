@@ -1,7 +1,7 @@
 #include "Increment.h"
 #include <iostream>
 
-void Increment::print()
+void Increment::print() const
 {
     std::cout << m_number << std::endl;
 }

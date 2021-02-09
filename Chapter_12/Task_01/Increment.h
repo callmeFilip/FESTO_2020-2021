@@ -10,7 +10,7 @@ public:
     Increment(int number = 0)
         : m_number(number) {}
 
-    void print();
+    void print() const;
 
     friend const Increment &operator++(Increment &obj);
 };
