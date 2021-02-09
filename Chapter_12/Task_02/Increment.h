@@ -14,7 +14,7 @@ public:
 
     void print(std::ostream &os) const;
 
-    const Increment operator+(const Increment &obj) const;
+    const Increment operator+(const Increment &other) const;
 };
 
 #endif // INCREMENT_H
