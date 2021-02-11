@@ -1,4 +1,5 @@
 #include "Number.h"
+#include <assert.h>
 
 Number &Number::operator=(const Number &other)
 {
@@ -27,6 +28,7 @@ const Number operator*(const Number &left, const Number &right)
 
 const Number operator/(const Number &left, const Number &right)
 {
+    assert(right.m_number != 0);
     return Number(left.m_number / right.m_number);
 }
 
