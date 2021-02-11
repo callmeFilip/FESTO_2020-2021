@@ -10,8 +10,6 @@ void function(Apple obj) // Warning can be ignored
 
 int main()
 {
-    Orange orange;
-
 #ifdef EXPLICIT
 
     function(Apple(Orange()));
