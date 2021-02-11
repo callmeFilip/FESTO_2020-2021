@@ -39,7 +39,7 @@ public:
     // Return value indicates end of list:
     bool operator++()
     { // Prefix
-        if (index >= oc.a.size() - 1)
+        if (index >= oc.a.size())
             return false;
         if (oc.a[++index] == 0)
             return false;
@@ -48,12 +48,10 @@ public:
 
     bool operator--()
     {
-        if (index >= oc.a.size())
+        if (--index <= 0)
         {
-            index = 0;
             return false;
         }
-        index--;
 
         return true;
     }
