@@ -5,15 +5,15 @@
 class Dummy
 {
 private:
+    std::string m_str;
+    char m_ch;
+
 public:
-    Dummy operator=(const Dummy &other, std::string str = "op= call");
+    Dummy(std::string str = "op= call", char ch = 'a') : m_str(str), m_ch(ch) {}
+
+    void print() const;
+
+    Dummy &operator=(const Dummy &other);
 };
 
-Dummy Dummy::operator=(const Dummy &other, std::string str = "op= call")
-{
-    if (this == &other)
-    {
-        return *this;
-    }
-}
 #endif // DUMMY_H
