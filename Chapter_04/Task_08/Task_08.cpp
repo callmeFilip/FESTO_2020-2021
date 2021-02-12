@@ -2,19 +2,22 @@
 #include <iostream>
 int main()
 {
+    const int STACKELEMENTS = 25;
     Stack doubleStack;
 
     doubleStack.initialize();
 
-    int a = 10;
-    doubleStack.push(&a);
-    std::cout << (*(int *)doubleStack.peek()) << std::endl;
+    double var = 10.0;
 
-    int b = 13;
-    doubleStack.push(&b);
+    for (int i = 0; i < STACKELEMENTS; i++)
+    {
+        doubleStack.push(&var);
+    }
 
-    std::cout << (*(int *)doubleStack.pop()) << std::endl;
-    std::cout << (*(int *)doubleStack.pop()) << std::endl;
+    for (int i = 0; i < STACKELEMENTS; i++)
+    {
+        std::cout << i + 1 << ". " << (*(double *)doubleStack.pop()) << std::endl;
+    }
 
     return 0;
 }
