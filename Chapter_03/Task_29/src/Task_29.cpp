@@ -16,7 +16,6 @@ void printBinary(const unsigned char val, int charStart = 7, int charEnd = 0)
             std::cout << "0";
         }
     }
-
 } ///:~
 
 void exponentPrint(unsigned char *cp)
