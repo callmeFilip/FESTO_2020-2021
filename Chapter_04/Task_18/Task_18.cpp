@@ -1,7 +1,7 @@
 #include <iostream>
-const char *TEXT = "osmina"; //define text with ""
+char TEXT[] = "osmina"; //define text with ""
 
-inline int findLength(const char *charArray)
+inline int findLength(char *charArray)
 {
     int wordSize = 0;
 
@@ -14,7 +14,7 @@ inline int findLength(const char *charArray)
     return wordSize;
 }
 
-char *strCopy(const char *charArray)
+char *strCopy(char *charArray)
 {
 
     static const int SIZE = findLength(charArray);
