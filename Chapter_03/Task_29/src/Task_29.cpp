@@ -22,8 +22,10 @@ void printBinary(const unsigned char val, int charStart = 7, int charEnd = 0)
 void exponentPrint(unsigned char *cp)
 {
     std::cout << "\nExponent Field: \n";
+
     printBinary(cp[7], 6, 0);
     printBinary(cp[6], 7, 4);
+
     std::cout << std::endl;
 }
 
@@ -32,6 +34,7 @@ void significandPrint(unsigned char *cp)
     std::cout << "\nSignificand Field: \n";
 
     printBinary(cp[6], 3, 0);
+
     for (int i = 5; i >= 0; i--)
     {
         printBinary(cp[i]);
