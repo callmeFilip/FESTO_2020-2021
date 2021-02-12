@@ -10,7 +10,7 @@ int main()
     for (int i = 0; i < ARRAYSIZE; i++)
     {
         strArr[i] = "number";
-        strArr[i] += i + 1;
+        strArr[i] += i + '41';
         std::cout << strArr[i] << std::endl;
     }
 
