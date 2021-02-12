@@ -1,36 +1,42 @@
 #include <iostream>
+#include <cstring>
+#define SIZE 5  // size of array
+#define VALUE 1 // value to be set for each element
 
-#define SIZE 5 // size of array
-#define VALUE 0 // value to be set for each element
-
-void setArr(void* n_voidPtr, int n_NumberOfBytes, int n_Value) 
+void setArr(void *n_voidPtr, int n_NumberOfBytes, int n_Value)
 {
-    int* ptr_intArr;
+    char *ptr = static_cast<char *>(n_voidPtr);
 
-    ptr_intArr = static_cast<int*> (n_voidPtr);
-
-    for (int i = 0 ; i < n_NumberOfBytes ; i++) 
+    for (int i = 0; i < n_NumberOfBytes; i++)
     {
-        ptr_intArr[i] = n_Value;
+        ptr[i] = n_Value;
     }
 }
 
 int main()
 {
 
-    int intArr[5];
+    int intArr[SIZE];
 
-    void* voidPtr;
+    void *voidPtr;
 
-    voidPtr = static_cast<void*> (intArr);
+    voidPtr = static_cast<void *>(intArr);
 
-    setArr(voidPtr, SIZE, VALUE);
+    setArr(voidPtr, SIZE * sizeof(int), VALUE);
 
-    for (int i : intArr) 
+    for (int i : intArr)
+    {
+        std::cout << i << std::endl;
+    }
+
+    std::cout << "If equal => it works" << std::endl;
+
+    memset(voidPtr, VALUE, SIZE * sizeof(int));
+
+    for (int i : intArr)
     {
         std::cout << i << std::endl;
     }
 
     return 0;
-    
 }
