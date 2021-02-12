@@ -1,14 +1,15 @@
 #include "Simple.h"
 #include <iostream>
 
-Simple::Simple(int newWidth)
+Simple::Simple(int newWidth) : width(newWidth)
 {
-    width = newWidth;
-    std::cout << "Simple class constructor called!" << std::endl;
+    std::cout << "Simple class constructor called!\n"
+              << "Value: " << width << std::endl;
 }
 Simple::~Simple()
 {
-    std::cout << "Simple class destructor called!" << std::endl;
+    std::cout << "Simple class destructor called!\n"
+              << "Value: " << width << std::endl;
 }
 void Simple::printWidth()
 {
