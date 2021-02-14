@@ -8,11 +8,8 @@ int main()
 
     std::cout << "-----------" << std::endl;
 
-    while (true)
-    {
-        Dummy *objArr = new Dummy[100000];
-        delete[] objArr;
-    }
+    Dummy *objArr = new Dummy[3];
+    delete[] objArr;
 
     return 0;
 }
