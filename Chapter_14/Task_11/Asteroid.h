@@ -1,6 +1,5 @@
 #ifndef ASTEROIS_H
 #define ASTEROIS_H
-#include "PStash.h"
 #include <iostream>
 
 class Asteroid

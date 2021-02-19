@@ -1,7 +1,6 @@
 //: C13:PStashTest.cpp
 //{L} PStash
 // Test of pointer Stash
-#include "PStash.h"
 #include "require.h"
 #include "AsteroidStash.h"
 #include <iostream>
