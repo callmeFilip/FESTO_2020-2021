@@ -14,9 +14,11 @@ Pager::Pager(const Pager &other)
 
 Pager &Pager::operator=(const Pager &other)
 {
-    std::cout << "Pager::operator=" << std::endl;
-    str = other.str;
-
+    if (this != &other)
+    {
+        std::cout << "Pager::operator=" << std::endl;
+        str = other.str;
+    }
     return *this;
 }
 

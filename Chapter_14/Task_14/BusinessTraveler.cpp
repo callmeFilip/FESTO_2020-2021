@@ -19,9 +19,11 @@ BusinessTraveler::BusinessTraveler(const BusinessTraveler &other) : Traveler(oth
 BusinessTraveler &BusinessTraveler::operator=(const BusinessTraveler &other)
 {
     std::cout << "BusinessTraveler::operator=" << std::endl;
-    Traveler::operator=(other);
-    pager = other.pager;
-
+    if (this != &other)
+    {
+        Traveler::operator=(other);
+        pager = other.pager;
+    }
     return *this;
 }
 

@@ -14,12 +14,13 @@ Traveler::Traveler(const Traveler &other)
 
 Traveler &Traveler::operator=(const Traveler &other)
 {
-    std::cout << "Traveler::operator=" << std::endl;
-    str = other.str;
-
+    if (this != &other)
+    {
+        std::cout << "Traveler::operator=" << std::endl;
+        str = other.str;
+    }
     return *this;
 }
-
 std::string Traveler::getStr() const
 {
     return str;
