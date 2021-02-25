@@ -64,7 +64,9 @@ int main()
 
     for (int i = 0; i < intStash.length(); i++)
     {
-        std::cout << *(int *)intStash.at(i) << std::endl;
+        int *element = (int *)intStash.at(i);
+        std::cout << *element << std::endl;
+        delete element;
     }
 
     return 0;
