@@ -33,6 +33,7 @@ Stack_Of_Int::Stack_Of_Int()
 Stack_Of_Int::~Stack_Of_Int()
 {
     imp->cleanup();
+    delete imp;
 }
 
 //Methods for Stack_Of_Int

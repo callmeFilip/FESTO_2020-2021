@@ -3,7 +3,7 @@
 
 #include <cstring>
 #include <assert.h>
-
+#include <iostream>
 #include "Stack_Of_Int.h"
 
 #define STORAGESIZE 100
@@ -33,6 +33,9 @@ Stack_Of_Int::Stack_Of_Int()
 Stack_Of_Int::~Stack_Of_Int()
 {
     imp->cleanup();
+
+    imp = 0;
+    delete imp;
 }
 
 //Methods for Stack_Of_Int
