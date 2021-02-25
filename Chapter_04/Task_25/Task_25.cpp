@@ -1,25 +1,25 @@
 #include <iostream>
 #include "Header.h"
 
+void printElement(LinkedList *current_element)
+{
+    std::cout << (long)current_element
+              << " Have m_value = "
+              << current_element->m_value
+              << std::endl;
+}
+
 void LinkedList::printData()
 {
     LinkedList *current_element = this;
 
     while (current_element->m_next != 0)
     {
-        std::cout << (long)current_element
-                  << " Have m_value = "
-                  << current_element->m_value
-                  << std::endl;
+        printElement(current_element);
         current_element = current_element->m_next;
     }
 
-    std::cout << (long)current_element
-              << " Have m_value = "
-              << current_element->m_value
-              << std::endl;
-
-    delete current_element;
+    printElement(current_element);
 }
 
 void LinkedList::createArray(int length)
