@@ -21,6 +21,10 @@ char *StashedStack::pop()
     Stash *result;
 
     result = (Stash *)m_stack.pop();
+    if (result == 0)
+    {
+        return 0;
+    }
 
     return ((char *)result->at(0));
 }

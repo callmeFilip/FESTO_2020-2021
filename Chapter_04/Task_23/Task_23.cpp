@@ -63,11 +63,12 @@ void *Stash::at(int index)
 {
     //check index out of bound
     assert(0 <= index);
+    std::cout << &m_next << std::endl;
 
     if (index >= m_next)
     {
-        std::cout << "wrong index";
-        return nullptr;
+        std::cout << "wrong index" << std::endl;
+        return 0;
     }
 
     //return address to the desired index
@@ -107,15 +108,6 @@ int Stash::length()
 }
 
 //stack
-
-Stack::~Stack()
-{
-    Link *previous = startingHead;
-    startingHead = startingHead->next;
-
-    delete (char *)previous->data;
-    delete previous;
-}
 
 void Stack::Link::initialize(void *n_ptrDat, Link *n_ptrNext)
 {
@@ -165,51 +157,6 @@ void Stack::cleanup()
         cout << "Stack not empty" << endl;
     }
 }
-/*
-void fillStorage(Stack &storage)
-{
-    Stash *fiveRowsStash;
-
-    ifstream write("test.txt");
-    std::string bufferString;
-    std::string fiveRows = "";
-    int rowCounter = 0;
-
-    vector<std::string> reverser;
-
-    //getting lines from test.txt and saving them into stash elements
-    while (getline(write, bufferString))
-    {
-        rowCounter++;
-        fiveRows += bufferString + "\n";
-
-        //every 5th row
-        if (rowCounter == 5)
-        {
-            //adds the fiveRows to a vector
-            reverser.push_back(fiveRows);
-
-            //zeroing
-            rowCounter = 0;
-            fiveRows = "";
-        }
-    }
-
-    while (reverser.size() != 0)
-    {
-        //size is produced from the size of the content in vector's last element
-        fiveRowsStash = new Stash(reverser[reverser.size() - 1].size());
-
-        //adding five rows from the text file to a stash
-        fiveRowsStash->add(reverser[reverser.size() - 1].c_str());
-
-        storage.push(fiveRowsStash); // filling the storage with the stash created
-
-        //removing last element from vector
-        reverser.pop_back();
-    }
-}
-*/
 
 int main()
 {
@@ -224,10 +171,8 @@ int main()
     while ((result = storage.pop()) != 0)
     {
         std::cout << result << std::endl;
+        delete result;
     }
-
-    //cleanup
-    delete result;
 
     return 0;
 }

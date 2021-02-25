@@ -9,10 +9,6 @@ struct Stack
         void initialize(void *dat, Link *nxt);
     } * head;
 
-    Link *startingHead;
-
-    ~Stack();
-
     void initialize();
     void push(void *dat);
     void *peek();
@@ -23,19 +19,19 @@ struct Stack
 struct Stash
 {
     /* data */
-    int m_size;     //size of each element
+    int m_size;     // size of each element
     int m_quantity; // number of elements
-    int m_next;     //next empty space
+    int m_next;     // next empty space
 
-    unsigned char *m_storage; //starting point of storage
+    unsigned char *m_storage; // starting point of storage
 
-    //constructors and destructors
+    // constructors and destructors
 
-    Stash();    //default sets the type to char-size
-    Stash(int); //sets the type to the size given
-    ~Stash();   //cleanup
+    Stash();    // default sets the type to char-size
+    Stash(int); // sets the type to the size given
+    ~Stash();   // cleanup
 
-    //methods
+    // methods
     unsigned int add(const void *element);
     void *at(int index);
     int length();
