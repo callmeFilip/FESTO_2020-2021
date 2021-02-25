@@ -11,7 +11,7 @@ private:
 public:
     FramisChild() : Framis() { out << " - " << std::endl; }
     ~FramisChild() { out << " - " << std::endl; }
-    void *operator new(size_t) throw(std::bad_alloc);
+    void *operator new(size_t);
     void operator delete(void *);
 };
 

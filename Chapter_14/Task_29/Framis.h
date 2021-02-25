@@ -22,7 +22,7 @@ public:
     }; // frami allowed
     Framis() { out << "Framis()\n"; }
     ~Framis() { out << "~Framis() ... "; }
-    void *operator new(size_t) throw(std::bad_alloc);
+    void *operator new(size_t);
     void operator delete(void *);
 };
 

@@ -3,7 +3,7 @@
 extern std::ofstream out;
 
 // Size is ignored -- assume a Framis object
-void *FramisChild::operator new(size_t) throw(std::bad_alloc)
+void *FramisChild::operator new(size_t)
 {
     for (int i = 0; i < psize; i++)
         if (!Framis::alloc_map[i])

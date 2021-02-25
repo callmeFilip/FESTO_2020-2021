@@ -15,7 +15,7 @@ int main()
         new FramisChild; // Out of memory
     }
 
-    catch (bad_alloc)
+    catch (const bad_alloc &)
     {
         cerr << "Out of memory!" << endl;
     }

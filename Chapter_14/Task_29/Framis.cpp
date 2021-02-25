@@ -12,7 +12,7 @@ unsigned char Framis::pool[psize * sizeof(Framis)];
 bool Framis::alloc_map[psize] = {false};
 
 // Size is ignored -- assume a Framis object
-void *Framis::operator new(size_t) throw(bad_alloc)
+void *Framis::operator new(size_t)
 {
     for (int i = 0; i < psize; i++)
         if (!alloc_map[i])
