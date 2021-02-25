@@ -9,9 +9,7 @@ struct Stack
         void initialize(void *dat, Link *nxt);
     } * head;
 
-    Link *startingHead;
-
-    ~Stack();
+    //~Stack();
 
     void initialize();
     void push(void *dat);

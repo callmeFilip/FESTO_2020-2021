@@ -109,15 +109,6 @@ int Stash::length()
 
 //stack
 
-Stack::~Stack()
-{
-    Link *previous = startingHead;
-    startingHead = startingHead->next;
-
-    delete (char *)previous->data;
-    delete previous;
-}
-
 void Stack::Link::initialize(void *n_ptrDat, Link *n_ptrNext)
 {
     data = n_ptrDat;
@@ -127,7 +118,6 @@ void Stack::Link::initialize(void *n_ptrDat, Link *n_ptrNext)
 void Stack::initialize()
 {
     head = 0;
-    startingHead = head;
 }
 
 void Stack::push(void *dat)
@@ -218,6 +208,7 @@ int main()
     while ((result = static_cast<Stash *>(storage.pop())) != 0)
     {
         std::cout << (char *)((Stash *)result->at(0)) << std::endl;
+        delete result;
     }
 
     //cleanup
