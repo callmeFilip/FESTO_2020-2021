@@ -15,23 +15,25 @@ void createArray(LinkedList *ptr_element, int length)
     head->m_value = i;
 };
 
+void printElement(LinkedList *current_element)
+{
+    std::cout << (long)current_element
+              << " Have m_value = "
+              << current_element->m_value
+              << std::endl;
+}
+
 void printData(LinkedList *ptr_start)
 {
     LinkedList *current_element = ptr_start;
 
     while (current_element->m_next != 0)
     {
-        std::cout << (long)current_element
-                  << " Have m_value = "
-                  << current_element->m_value
-                  << std::endl;
+        printElement(current_element);
         current_element = current_element->m_next;
     }
 
-    std::cout << (long)current_element
-              << " Have m_value = "
-              << current_element->m_value
-              << std::endl;
+    printElement(current_element);
 }
 
 int main()
