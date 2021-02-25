@@ -84,8 +84,13 @@ public:
 int main()
 {
     Child c(2);
+
     cout << "calling copy-constructor: " << endl;
+
     Child c2 = c; // Calls copy-constructor
+
     cout << "values in c2:\n"
          << c2;
+
+    return 0;
 } ///:~
