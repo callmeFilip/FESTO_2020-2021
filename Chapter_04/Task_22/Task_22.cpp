@@ -211,8 +211,5 @@ int main()
         delete result;
     }
 
-    //cleanup
-    delete result;
-
     return 0;
 }
