@@ -72,6 +72,7 @@ int main()
 /**
  * I think that Framis.cpp will not work correctly
  * because of the static pool part.
- * If new object of the child class gets created, it will
- * be allocated in the Framis's pool due to operator inheritence.
+ * If new object of the child class gets created and it is bigger than Framis,
+ * it will be allocated in the Framis's pool due to operator inheritence and 
+ * the indexing will go off.
 */
