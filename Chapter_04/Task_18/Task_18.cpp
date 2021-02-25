@@ -1,5 +1,5 @@
 #include <iostream>
-char TEXT[] = "osmina"; //define text with ""
+const char TEXT[] = "osmina"; //define text with ""
 
 inline int findLength(char *charArray)
 {
@@ -32,7 +32,7 @@ char *strCopy(char *charArray)
 int main()
 {
 
-    char *firstIteration = strCopy(TEXT);
+    char *firstIteration = strCopy(const_cast<char *>(TEXT));
     char *secondIteration = strCopy(firstIteration);
 
     //printing the result of second iteration
