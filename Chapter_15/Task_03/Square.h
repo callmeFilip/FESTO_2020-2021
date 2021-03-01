@@ -6,7 +6,7 @@ class Square : public Shape
 {
 private:
 public:
-    Square() {}
+    Square() : Shape() {}
     void draw()
     {
         std::cout << "Square::draw()" << std::endl;
