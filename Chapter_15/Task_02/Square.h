@@ -6,7 +6,7 @@ class Square : public Shape
 {
 private:
 public:
-    Square() { draw(); } // this calls the local version of draw()
+    Square() : Shape() { draw(); } // this calls the local version of draw()
     void draw()
     {
         std::cout << "Square::draw()" << std::endl;
