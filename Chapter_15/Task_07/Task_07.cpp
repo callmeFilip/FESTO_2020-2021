@@ -14,6 +14,8 @@ int main()
     for (size_t i = 0; i < ARRAYSIZE; i++)
     {
         arr[i]->Rodent::eat();
+        arr[i]->Rodent::gnaw();
+        std::cout << std::endl;
     }
 
     for (size_t i = 0; i < ARRAYSIZE; i++)
