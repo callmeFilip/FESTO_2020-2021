@@ -22,7 +22,7 @@ int main()
     /**
      * I am not really sure about this one.
      * I think that constructors and destructors
-     * are not generated.
+     * are generated inline.
     */
     return 0;
 }
