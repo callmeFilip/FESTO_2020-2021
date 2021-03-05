@@ -8,14 +8,17 @@ public:
     {
         std::cout << "Base says: Hello!" << std::endl;
     }
+    virtual ~Base() {}
 };
 
-class Derived
+class Derived : public Base
 {
 private:
     const int m_data = 5;
 
 public:
+    virtual ~Derived() {}
+
     virtual void print() const
     {
         std::cout << "Derived says: Hello!" << std::endl;
@@ -32,13 +35,18 @@ void function(Base obj)
     Derived *d = reinterpret_cast<Derived *>(&obj);
     d->print();
     d->data();
-
-    delete d;
 }
 
 int main()
 {
-    Base b1;
-    b1.print();
+    Derived b1;
+    function(b1);
+
     return 0;
 }
+
+/**
+ * No it doesn't crash, it just have undefined behavior.
+ * Passing object by value causes another allocation on another address.
+ * When it gets the m_data it gets random value from the memory.
+*/
