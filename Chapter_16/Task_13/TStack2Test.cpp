@@ -34,6 +34,7 @@ int main()
 
         cout << it->c_str() << endl;
         it++;
+
         if (++i == 10) // Remember 10th line
         {
             std::cout << "i = 10 : " << it->c_str() << std::endl;
