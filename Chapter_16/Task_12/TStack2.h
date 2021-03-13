@@ -31,6 +31,7 @@ public:
     public:
         iterator(Stack &tl) : m_stack(tl), m_index(0) {}
         iterator(Stack &tl, bool) : m_stack(tl), m_index(tl.m_storage.size()) {}
+        //iterator(const iterator &tl, bool) : m_stack(tl.m_stack), m_index(tl.m_stack.m_storage.size()) {} // Zashto tova raboti ako komentiram gorniq red i ostavq tozi????
 
         // Copy-constructor:
         iterator(const iterator &tl) : m_stack(tl.m_stack), m_index(tl.m_index) {}
@@ -53,9 +54,9 @@ public:
 
     }; // ~iterator class
 
-    iterator begin() { return iterator(*this); }
+    iterator begin() { return iterator(*this); } // *this stands for Stack <T>
 
-    iterator end() { return iterator(*this, true); }
+    iterator end() { return iterator(*this, true); } // *this stands for Stack <T>
 };
 
 template <class T>
