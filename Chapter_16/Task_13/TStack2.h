@@ -32,7 +32,7 @@ public:
         size_t m_index;
 
     public:
-        iterator(Stack &tl) : m_stack(tl), m_index(0) {}
+        iterator(Stack &tl) : m_stack(tl), m_index(1) {}
         iterator(Stack &tl, bool) : m_stack(tl), m_index(tl.m_storage.size()) {}
         //iterator(const iterator &tl, bool) : m_stack(tl.m_stack), m_index(tl.m_stack.m_storage.size()) {} // Zashto tova raboti ako komentiram gorniq red i ostavq tozi????
 
@@ -50,7 +50,7 @@ public:
         {
             std::stack<T *> temp(m_stack.m_storage);
 
-            while (temp.size() != m_index + 1)
+            while (temp.size() != m_index)
             {
                 temp.pop();
             }
@@ -62,7 +62,7 @@ public:
         {
             std::stack<T *> temp(m_stack.m_storage);
 
-            while (temp.size() != m_index + 1)
+            while (temp.size() != m_index)
             {
                 temp.pop();
             }
