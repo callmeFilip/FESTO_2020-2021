@@ -29,11 +29,11 @@ int main()
     Stack<string>::iterator it = textlines.begin();
     Stack<string>::iterator *it2 = 0;
 
-    std::cout << "da" << std::endl;
-
+    std::cout << "daaaaaaa " << std::endl;
     while (it != textlines.end())
     {
         cout << it->c_str() << endl;
+
         it++;
         if (++i == 10) // Remember 10th line
         {
