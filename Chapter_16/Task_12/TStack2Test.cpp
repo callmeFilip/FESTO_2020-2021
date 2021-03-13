@@ -37,7 +37,6 @@ int main()
         it++;
         if (++i == 10) // Remember 10th line
         {
-            std::cout << "i = 10" << it->c_str() << std::endl;
             it2 = new Stack<string>::iterator(it);
         }
     }
