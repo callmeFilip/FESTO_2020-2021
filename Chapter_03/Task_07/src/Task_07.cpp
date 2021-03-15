@@ -1,14 +1,13 @@
 #include <iostream>
-void ptrPassString(std::string* n_string)
+void ptrPassString(std::string *n_string)
 {
     *n_string = "Modification 1";
 }
 
-void refPassString(std::string& n_string)
+void refPassString(std::string &n_string)
 {
     n_string = "HOUSE WORK (Froglicka Remix) e stranna pesen";
 }
-
 
 int main()
 {
@@ -19,10 +18,8 @@ int main()
     ptrPassString(&str);
     std::cout << str << std::endl;
 
-
     refPassString(str);
     std::cout << str << std::endl;
 
     return 0;
-
 }
