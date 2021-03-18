@@ -63,6 +63,7 @@ public:
             return (ptr->*pmem)(i, j); // Make the call
         }
     };
+
     template <typename PMF>
     FunctionObject<Dog, PMF> operator->*(PMF pmf)
     {
