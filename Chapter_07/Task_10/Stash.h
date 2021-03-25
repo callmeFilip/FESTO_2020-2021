@@ -16,8 +16,8 @@ public:
 
     //methods
     void add(const void *element);
-    void *at(int index);
-    int length();
+    void *fetch(int index);
+    int count();
 };
 
 #endif

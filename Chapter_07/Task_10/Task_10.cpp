@@ -1,4 +1,6 @@
 #include "Stash.h"
+#include "require.h"
+
 #include <iostream>
 #include <assert.h>
 #include <cstring>
@@ -30,10 +32,10 @@ void Stash::add(const void *element)
     m_quantity++;
 }
 
-void *Stash::at(int index)
+void *Stash::fetch(int index)
 {
     //check index out of bound
-    if (index >= m_quantity || index < 0)
+    if (index > m_quantity || index < 0)
     {
         std::cout << "Invalid index!" << std::endl;
         return nullptr;
@@ -43,26 +45,40 @@ void *Stash::at(int index)
     return &(m_storage->pointer()[index * m_size]);
 }
 
-int Stash::length()
+int Stash::count()
 {
     return m_quantity;
 }
 
 int main()
 {
+    using namespace std;
     Stash intStash(sizeof(int));
 
-    for (size_t i = 0; i < 10; i++)
-    {
-        intStash.add(new int(i));
-    }
+    for (int i = 0; i < 100; i++)
+        intStash.add(&i);
 
-    for (int i = 0; i < intStash.length(); i++)
-    {
-        std::cout << *(int *)intStash.at(i) << std::endl;
-    }
+    for (int j = 0; j < intStash.count(); j++)
+        cout << "intStash.fetch(" << j << ") = "
+             << *(int *)intStash.fetch(j)
+             << endl;
 
-    intStash.~Stash();
+    const int bufsize = 80;
+    Stash stringStash(sizeof(char) * bufsize, 100);
+
+    ifstream in("Task_10.cpp");
+
+    assure(in, "Task_10.cpp");
+    string line;
+
+    while (getline(in, line))
+        stringStash.add((char *)line.c_str());
+    int k = 0;
+    char *cp;
+
+    while ((cp = (char *)stringStash.fetch(k++)) != 0)
+        cout << "stringStash.fetch(" << k << ") = "
+             << cp << endl;
 
     return 0;
 }
