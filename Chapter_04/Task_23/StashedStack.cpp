@@ -1,6 +1,7 @@
 #include "StashedStack.h"
 #include <fstream>
 #include <vector>
+#include <cstring>
 StashedStack::StashedStack()
 {
     m_stack.initialize();
@@ -18,20 +19,27 @@ void StashedStack::push(Stash *element)
 
 char *StashedStack::pop()
 {
-    Stash *result;
+    Stash *element;
 
-    result = (Stash *)m_stack.pop();
-    if (result == 0)
+    element = (Stash *)m_stack.pop();
+    if (element == 0)
     {
         return 0;
     }
+    const int SIZE = element->m_size;
 
-    return ((char *)result->at(0));
+    char *result = new char[SIZE];
+
+    strcpy(result, (char *)element->at(0));
+
+    delete element;
+
+    return result;
 }
 
 void StashedStack::fillFromFile(std::string path)
 {
-    Stash *fiveRowsStash;
+    Stash *fiveRowsStash = 0;
 
     std::ifstream write(path);
     std::string bufferString;

@@ -27,6 +27,8 @@ Stash::Stash(int n_size)
 
 Stash::~Stash()
 {
+    std::cout << "~" << std::endl;
+
     if (m_storage != 0)
     {
         std::cout << "freeing memory..." << std::endl;
