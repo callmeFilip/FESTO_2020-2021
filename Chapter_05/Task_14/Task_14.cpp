@@ -5,12 +5,10 @@ int main()
 {
     Stack_Of_Int intStorage;
 
-    int age = 23;
-    intStorage.push(&age);
+    intStorage.push(new int(23));
     std::cout << *intStorage.peek() << std::endl;
 
-    age = 44;
-    intStorage.push(&age);
+    intStorage.push(new int(44));
     std::cout << *intStorage.peek() << std::endl;
 
     delete intStorage.pop();

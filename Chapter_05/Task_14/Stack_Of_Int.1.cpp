@@ -34,8 +34,8 @@ Stack_Of_Int::~Stack_Of_Int()
 {
     imp->cleanup();
 
-    imp = 0;
     delete imp;
+    imp = 0;
 }
 
 //Methods for Stack_Of_Int
